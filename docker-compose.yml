@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  red-app:
+    build: ./red
+    networks:
+      - traffic-light
+
+  yellow-app:
+    build: ./yellow
+    networks:
+      - traffic-light
+
+  green-app:
+    build: ./green
+    networks:
+      - traffic-light
+
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "3000:3000"
+      - "4000:4000"
+      - "5000:5000"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    networks:
+      - traffic-light
+    depends_on:
+      - red-app
+      - yellow-app
+      - green-app
+
+networks:
+  traffic-light:
+    ipam:
+      driver: default
+      config:
+        - subnet: "172.20.0.0/16"
