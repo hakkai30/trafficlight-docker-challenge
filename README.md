@@ -149,3 +149,23 @@ Distributed under the MIT License. See `LICENSE` for more information.
 [medium-url]: https://hayk96.medium.com
 [stackoverflow-shield]: https://img.shields.io/badge/-Stackoverflow-black.svg?style=for-the-badge&logo=stackoverflow&colorB=555
 [stackoverflow-url]: https://stackoverflow.com/users/16454242/hayk-davtyan?tab=profile
+
+## Resultado de la práctica
+
+### Green
+
+![green1](green/green1.png)
+
+![green2](green/green2.png)
+
+### Red
+
+![red1](red/red1.png)
+
+![red2](red/red2.png)
+
+### Yellow
+
+![yellow1](yellow/yellow1.png)
+
+![yellow2](yellow/yellow2.png)
